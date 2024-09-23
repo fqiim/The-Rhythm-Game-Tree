@@ -1,10 +1,10 @@
 let modInfo = {
-	name:"音乐游戏树",
+	name:"QqQ树",
 	id: "Rhythm Game",
 	author: "QqQe308",
 	pointsName: "Notes",
 	modFiles: ["layers.js", "layers2.js", "tree.js"],
-	discordName: "作者的B站链接",
+	discordName: "QqQe308的B站链接",
 	discordLink: "https://b23.tv/ALvJ9Im",
 	initialStartPoints: n(10), // Used for hard resets and new players
 	offlineLimit: 1,  // In hours
@@ -15,7 +15,7 @@ let VERSION = {
 	name: "Rebalance II",
 }
 
-let winText = `恭喜通关！你已经完成了你的音游之旅…吗？请期待下一个更新！<br>当前结局：e1.213e7 Notes，下一个更新:更多重平衡！`
+let winText = `恭喜通关！你已经完成了你的QqQ之旅…吗？请期待下一个更新！<br>当前结局：e1.213e7 Notes，下一个更新:更多重平衡！`
 
 // Determines when the game "ends"
 function isEndgame() {
