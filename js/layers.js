@@ -5532,10 +5532,39 @@ onPurchase() {setBuyableAmount('sp',15,gba('sp',15).sub(41))},
 },
 },
 })//Song Pack
-	 addLayer("W", {
-		         upgrades: {11:{  title: "测试",
-    description: "双倍获取notes",
+  infoboxes: {
+ introBox: {
+  title: "层级1--歌曲",
+  body(){return "欢迎您来到本游戏！本游戏的玩法是模组树，主题是音乐游戏！<br>作者：QqQe308（B站同名）<br>无特殊说明情况下，增益乘数在增益指数前生效（额外乘数除外）<br>本游戏中出现的音游大部分可从616.sb链接下载<br>为了能够成功导出存档，标签页中不能出现中文字符，故采用英文代替（2024.7.9记：其实现在可以了，但是懒得改了）"},
+     },
+},
+    name: "songs2", // This is optional, only used in a few places, If absent it just uses the layer main-display
+    symbol: "Q", // This appears on the layer's node. Default is the id with the first letter capitalized
+    position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
+    startData() { return {
+     unlocked: true,
+		points: n(0),
+		sc: n(15000),
+		sce:n(0.5),
+    }},
+     color: "#abcdef",
+    requires: n(10), // Can be a function that takes requirement increases into account
+    resource: "歌曲", // Name of prestige currency
+    baseResource: "Notes", // Name of resource prestige is based on
+    baseAmount() {return player.points}, // Get the current amount of baseResource
+    type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
+    exponent: 0.05,
+    // Prestige currency exponent
+    gainMult() { // Calculate the multiplier for main currency from bonuses
+    //sgainmult//
+     mult = n(0.5)
+     sc = player.s.sc
+     sce=player.s.sce
+     mult = mult.times(player['a'].points).add(1)
+     if (hasUpgrade('a', 11)) mult = mult.times(upgradeEffect('a', 11))
+	        upgrades: {    title: "Make this whatever you want!",
+    description: "Double your point gain.",
     cost: n(1),
 
-    },}})
+    },
 
