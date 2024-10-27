@@ -566,6 +566,15 @@ style() { return { 'background-color': hasAchievement('A',1011)?"#308308":"#ff48
 },
 },
 },
+	 10114: {
+     name: "测试",
+     done() {return hasUpgrade('t',11)&&n(challengeCompletions('t',11)).gte(10)&&n(gba('t',11)).gte(250)},
+     tooltip() {
+     if(hasAchievement('A',1011)) return "TestGameMaster<br>获得测试升级11，完成测试挑战10次，并且购买测试可购买250次<br>奖励：获得测试里程碑"
+     else return "TestGameMaster"
+     },
+style() { return { 'background-color': hasAchievement('A',1011)?"#308308":"#ff4848"}},
+     },
 )//Achievements
 addLayer("t", {
   infoboxes: {
