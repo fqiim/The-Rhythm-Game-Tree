@@ -5532,4 +5532,10 @@ onPurchase() {setBuyableAmount('sp',15,gba('sp',15).sub(41))},
 },
 },
 })//Song Pack
+	 addLayer("W", {
+		         upgrades: {11:{  title: "测试",
+    description: "双倍获取notes",
+    cost: n(1),
+
+    },}})
 
